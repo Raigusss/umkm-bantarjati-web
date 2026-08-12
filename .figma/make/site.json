@@ -1,0 +1,10 @@
+{
+  "description": "Showcases local small and medium enterprises in Bantarjati, connecting residents and visitors with businesses to promote community support and growth.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

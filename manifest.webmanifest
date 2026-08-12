@@ -1,0 +1,18 @@
+{
+  "name": "UMKM Bantarjati",
+  "short_name": "UMKM Bantarjati",
+  "description": "Direktori UMKM Kelurahan Bantarjati dengan dukungan offline dan instalasi aplikasi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#3b2a1a",
+  "background_color": "#f5efe6",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
