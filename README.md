@@ -96,6 +96,8 @@ Aplikasi ini dibangun dengan teknologi modern:
 ---
 
 ## 📁 Struktur Proyek
+
+```text
 umkm-bantarjati-web/
 ├── .figma/
 │   └── make/
