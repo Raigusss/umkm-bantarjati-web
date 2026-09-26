@@ -1,7 +1,98 @@
-{
-  "owner": "Raigusss",
-  "repo": "umkm-bantarjati-web",
-  "path": "README.md",
-  "message": "Add comprehensive README with project documentation, flow explanation, and flowchart",
-  "content": "# UMKM Bantarjati - Direktori UMKM Kelurahan Bantarjati\n\n> 📱 **Platform digital untuk menjelajahi dan menemukan UMKM lokal di Kelurahan Bantarjati dengan dukungan offline dan instalasi sebagai aplikasi native.**\n\n## 📋 Daftar Isi\n\n- [Tentang Proyek](#tentang-proyek)\n- [Fitur Utama](#fitur-utama)\n- [Tech Stack](#tech-stack)\n- [Struktur Proyek](#struktur-proyek)\n- [Alur Aplikasi](#alur-aplikasi)\n- [Flowchart Sistem](#flowchart-sistem)\n- [Instalasi & Setup](#instalasi--setup)\n- [Panduan Penggunaan](#panduan-penggunaan)\n- [Kontribusi](#kontribusi)\n\n---\n\n## 📌 Tentang Proyek\n\n**UMKM Bantarjati Web** adalah aplikasi Progressive Web App (PWA) yang dirancang untuk menyediakan direktori lengkap dan mudah diakses dari semua Usaha Mikro Kecil dan Menengah (UMKM) di Kelurahan Bantarjati, Bogor.\n\nAplikasi ini dibangun dengan teknologi modern:\n- **React 19** untuk UI yang responsif dan interaktif\n- **Vite** untuk build yang cepat dan hot reload development\n- **Tailwind CSS v4** untuk styling yang konsisten\n- **React Router** untuk navigasi antar halaman\n- **Service Worker (PWA)** untuk akses offline dan instalasi sebagai aplikasi native\n\n### 📊 Statistik UMKM Bantarjati\n- **142** UMKM terdaftar\n- **48** sektor kuliner\n- **380+** tenaga kerja terserap\n- **Rp 2,1 M** omzet gabungan per bulan\n\n---\n\n## ✨ Fitur Utama\n\n### 1. **Halaman Home / Landing Page**\n   - Tampilan hero dengan pengenalan aplikasi\n   - Statistik UMKM Bantarjati\n   - Featured UMKM pilihan\n   - Call-to-action untuk menjelajahi direktori\n\n### 2. **Halaman Direktori**\n   - Filter UMKM berdasarkan kategori (Semua, Kuliner, Fashion, Kerajinan, Jasa, Perdagangan)\n   - Daftar UMKM dalam grid layout\n   - Informasi dasar setiap UMKM (nama, kategori, deskripsi singkat)\n   - Search/filter real-time\n\n### 3. **Halaman Detail UMKM**\n   - Informasi lengkap tentang setiap UMKM\n   - Foto UMKM berkualitas\n   - Deskripsi detail bisnis\n   - Alamat lengkap\n   - Nomor kontak (WhatsApp clickable)\n   - Jam operasional\n   - Tags/label produk\n   - Informasi tambahan (tahun berdiri, omzet)\n   - Tombol navigasi back/share\n\n### 4. **Halaman Tentang**\n   - Informasi tentang Kelurahan Bantarjati\n   - Visi dan misi program UMKM\n   - Tim pengembang\n   - Contact & sosial media\n\n### 5. **Progressive Web App (PWA)**\n   - ✅ **Offline Support** - Aplikasi tetap berfungsi tanpa internet\n   - ✅ **Install as App** - Bisa diinstal di home screen smartphone/desktop\n   - ✅ **Push Notifications** - Notifikasi update (opsional)\n   - ✅ **Auto-update** - Konten terbaru diunduh otomatis saat online\n\n### 6. **Responsive Design**\n   - 📱 Mobile-first design\n   - 💻 Tampilan sempurna di tablet dan desktop\n   - 🎨 Tema warna yang menarik dan konsisten\n\n---\n\n## 🛠️ Tech Stack\n\n| Kategori | Teknologi |\n|----------|-----------|\n| **Frontend Framework** | React 19, React Router 8 |\n| **Build Tool** | Vite 8 |\n| **Styling** | Tailwind CSS v4 + @tailwindcss/vite |\n| **Language** | TypeScript 5.7 |\n| **PWA** | Workbox Window, vite-plugin-pwa |\n| **Package Manager** | pnpm |\n| **Type Checking** | TypeScript |\n| **Code Formatting** | oxfmt |\n| **Platform** | Figma Make (Custom Vite Config) |\n\n---\n\n## 📁 Struktur Proyek\n\n```\numkm-bantarjati-web/\n├── .figma/                          # Figma Make konfigurasi\n│   └── make/\n│       └── site.json               # Site metadata configuration\n├── src/\n│   ├── main.tsx                    # React entry point\n│   ├── App.tsx                     # Root component dengan PWA logic\n│   ├── index.css                   # Global styles & Tailwind imports\n│   ├── data.ts                     # Konstanta & data UMKM (hardcoded)\n│   ├── routes.ts                   # Definisi routing React Router\n│   ├── vite-env.d.ts               # Vite type definitions\n│   │\n│   ├── components/                 # Reusable UI components\n│   │   ├── Navbar.tsx              # Navigation bar dengan responsive menu\n│   │   └── Footer.tsx              # Footer dengan contact info\n│   │\n│   ├── layouts/                    # Layout templates\n│   │   └── Root.tsx                # Root layout dengan Navbar & Footer\n│   │\n│   └── pages/                      # Page components (routes)\n│       ├── Home.tsx                # Halaman home/landing\n│       ├── Direktori.tsx           # List UMKM dengan filter\n│       ├── Detail.tsx              # Detail halaman UMKM\n│       ├── Tentang.tsx             # About page\n│       └── NotFound.tsx            # 404 page\n│\n├── public/\n│   ├── icon.svg                    # PWA icon\n│   └── manifest.webmanifest        # PWA manifest\n│\n├── index.html                      # HTML entry point\n├── package.json                    # Dependencies & scripts\n├── pnpm-lock.yaml                  # Dependency lock file\n├── tsconfig.json                   # TypeScript config\n├── vite.config.ts                  # Vite configuration (dengan PWA plugin)\n├── tailwind.config.ts              # Tailwind CSS config\n├── .gitignore                      # Git ignore rules\n├── .gitattributes                  # Git attributes\n├── .mise.toml                      # Tool versions (Node.js, pnpm)\n├── netlify.toml                    # Netlify deployment config\n├── AGENTS.md                       # Dokumentasi untuk Figma Make agents\n└── README.md                       # File ini\n\n```\n\n### 📄 File Kunci Dijelaskan\n\n| File | Tujuan |\n|------|--------|\n| `src/data.ts` | Database UMKM dalam bentuk array - tempat menambah/edit UMKM baru |\n| `src/routes.ts` | Definisi semua rute aplikasi (Home, Direktori, Detail, etc) |\n| `src/App.tsx` | Komponen root dengan logic PWA (offline ready, refresh notifications) |\n| `vite.config.ts` | Konfigurasi Vite + PWA plugin + Figma Make plugins |\n| `index.html` | HTML shell dengan Figma placeholders untuk SEO meta tags |\n\n---\n\n## 🔄 Alur Aplikasi\n\n### User Journey - Flow Dasar\n\n```\n[User Membuka App]\n        ↓\n[App Check: Online or Offline?]\n    ↙       ↘\n[Online]  [Offline]\n    ↓           ↓\n[Load dari     [Load dari\n Internet]      Service Worker\n              Cache]\n    ↓           ↓\n[App Initialized]\n        ↓\n[React Router Render]\n        ↓\n[Home Page Displayed]\n        ↓\n[User memilih navigasi]\n        ↓\n[Direktori | Detail | Tentang]\n```\n\n### Data Flow - Component Structure\n\n```\nApp.tsx (Root Component)\n  ├── PWA Registration\n  ├── Offline/Update Notification\n  └── RouterProvider\n       └── Root.tsx (Layout)\n            ├── Navbar (Navigation)\n            ├── Outlet (Page Routes)\n            │   ├── Home.tsx\n            │   ├── Direktori.tsx\n            │   │   └── Filter + List UMKM\n            │   ├── Detail.tsx\n            │   │   └── Detail UMKM dari data.ts\n            │   ├── Tentang.tsx\n            │   └── NotFound.tsx\n            └── Footer\n```\n\n### State Management\n\nAplikasi ini menggunakan **React Hooks** bawaan (tidak menggunakan Redux atau Context API):\n\n- **useState**: Untuk state lokal (filter, sorting, modal)\n- **useEffect**: Untuk side effects (fetch, PWA registration)\n- **useRef**: Untuk referensi imperatif (PWA update handler)\n- **useParams**: Dari React Router untuk ambil ID dari URL\n\n---\n\n## 📊 Flowchart Sistem\n\n### 1. User Flow - Navigasi Aplikasi\n\n```\n┌─────────────────────┐\n│  Buka Aplikasi      │\n└──────────┬──────────┘\n           │\n           ▼\n    ┌──────────────┐\n    │  Home Page   │\n    └──────┬───────┘\n           │\n      ┌────┴────────────────┐\n      │                     │\n      ▼                     ▼\n┌──────────────┐    ┌──────────────┐\n│  Lihat Semua │    │  Tentang     │\n│   UMKM       │    │              │\n└──────┬───────┘    └──────────────┘\n       │\n       ▼\n┌──────────────────┐\n│  Halaman         │\n│  Direktori       │\n└──────┬───────────┘\n       │\n  ┌────┴──────────┐\n  │ Filter/Search │\n  └────┬──────────┘\n       │\n       ▼\n┌──────────────────┐\n│  List UMKM      │\n│  (Grid View)    │\n└──────┬───────────┘\n       │\n  ┌────┴─────────────┐\n  │ Klik UMKM Card  │\n  └────┬─────────────┘\n       │\n       ▼\n┌──────────────────┐\n│  Detail UMKM    │\n│  - Foto         │\n│  - Deskripsi    │\n│  - Kontak       │\n│  - Alamat       │\n│  - Jam Operasi  │\n└──────┬───────────┘\n       │\n  ┌────┴──────────────┐\n  │ Hubungi (WhatsApp)│\n  │ atau Kembali     │\n  └───────────────────┘\n```\n\n### 2. PWA Lifecycle Flow\n\n```\n┌─────────────────┐\n│  App Start      │\n└────────┬────────┘\n         │\n         ▼\n┌──────────────────────┐\n│ App.tsx useEffect    │\n│ registerSW()         │\n└────────┬─────────────┘\n         │\n    ┌────┴────────────────┐\n    │                     │\n    ▼                     ▼\n[Registrasi SW]   [Monitor Status]\n    │                    │\n    ▼                    ▼\n┌──────────────┐  ┌────────────────┐\n│ Service      │  │ Check:        │\n│ Worker      │  │ Offline Ready?│\n│ Registered  │  │ Need Refresh? │\n└──────┬───────┘  └────┬───────────┘\n       │               │\n       ▼               ▼\n    Cache          ┌──────────────────┐\n   Resources       │ Tampilkan Notif: │\n       │           │ - Offline Ready  │\n       ▼           │ - Update Ready   │\n   [Siap        └───┬────────────────┘\n    Offline]        │\n                    ▼\n              [User Action]\n              Perbarui / Ignore\n```\n\n### 3. Data Flow - Direktori & Filter\n\n```\n┌──────────────┐\n│  Direktori   │\n│   Page       │\n└────────┬─────┘\n         │\n         ▼\n┌────────────────────┐\n│ useState:         │\n│ - selectedCategory│\n│ - searchTerm      │\n└────────┬───────────┘\n         │\n         ▼\n┌────────────────────┐\n│ Filter & Search   │\n│ Logic             │\n└────────┬───────────┘\n         │\n    ┌────┴──────────────────┐\n    │                       │\n    ▼                       ▼\n[Category Filter]   [Search Filter]\n    │                       │\n    └───────┬───────────────┘\n            │\n            ▼\n  ┌─────────────────────┐\n  │ Filtered UMKM Data  │\n  │ (dari data.ts)      │\n  └────────┬────────────┘\n           │\n           ▼\n  ┌─────────────────────┐\n  │ Render Grid/List    │\n  │ dengan UMKM Cards   │\n  └────────┬────────────┘\n           │\n           ▼\n  ┌─────────────────────┐\n  │ User klik Card      │\n  │ navigate ke Detail  │\n  │ dengan UMKM ID      │\n  └─────────────────────┘\n```\n\n### 4. Detail Page - Data Resolution\n\n```\n┌────────────────────┐\n│ Detail Page Load   │\n│ URL: /direktori/id │\n└────────┬───────────┘\n         │\n         ▼\n┌──────────────────┐\n│ useParams()      │\n│ ambil ID dari    │\n│ URL              │\n└────────┬─────────┘\n         │\n         ▼\n┌──────────────────────┐\n│ Cari UMKM di        │\n│ data.ts berdasar ID │\n│                     │\n│ UMKM_DATA.find()    │\n└────────┬─────────────┘\n         │\n    ┌────┴────────┐\n    │             │\n    ▼             ▼\n[Found]      [Not Found]\n    │             │\n    ▼             ▼\n[Render       [Render\n Detail]    Not Found]\n    │             │\n    ▼             ▼\n┌────────────┐  ┌─────────────┐\n│ Tampilkan: │  │ Redirect ke │\n│ - Foto     │  │ Home atau   │\n│ - Info     │  │ 404 Page    │\n│ - Kontak   │  └─────────────┘\n│ - Share btn│\n└────────────┘\n```\n\n---\n\n## 💻 Instalasi & Setup\n\n### Prerequisites\n\n- **Node.js**: v18.0.0 atau lebih tinggi\n- **pnpm**: v7.0.0 atau lebih tinggi (rekomendasi)\n- Text Editor: VS Code, WebStorm, atau sejenisnya\n\n### Langkah 1: Clone Repository\n\n```bash\ngit clone https://github.com/Raigusss/umkm-bantarjati-web.git\ncd umkm-bantarjati-web\n```\n\n### Langkah 2: Install Dependencies\n\n```bash\n# Menggunakan pnpm (rekomendasi)\npnpm install\n\n# atau jika menggunakan npm\nnpm install\n\n# atau jika menggunakan yarn\nyarn install\n```\n\n### Langkah 3: Development Server\n\n```bash\npnpm dev\n```\n\nAplikasi akan berjalan di: **http://localhost:8443** (default port untuk Figma Make)\n\nAtau lihat output terminal untuk URL yang tepat.\n\n### Langkah 4: Build untuk Production\n\n```bash\npnpm build\n```\n\nOutput akan berada di folder `dist/`\n\n### Langkah 5: Preview Production Build\n\n```bash\npnpm preview\n```\n\n---\n\n## 🚀 Panduan Penggunaan\n\n### Menambah UMKM Baru\n\nUntuk menambahkan UMKM baru ke direktori, edit file `src/data.ts`:\n\n```typescript\nexport const UMKM_DATA: Umkm[] = [\n  // ... UMKM lainnya\n  {\n    id: 10,                                // ID unik (increment dari yang terakhir)\n    nama: 'Nama UMKM Baru',               // Nama bisnis\n    kategori: 'Kuliner',                  // Kategori (Kuliner, Fashion, Kerajinan, Jasa, Perdagangan)\n    deskripsi: 'Deskripsi lengkap UMKM...', // Deskripsi detail\n    alamat: 'Jl. Nama Jalan No. XX',     // Alamat lengkap\n    kontak: '0812-3456-7890',             // Nomor WhatsApp\n    jam: 'Setiap hari 09.00–17.00',      // Jam operasional\n    img: 'https://images.unsplash.com/...', // URL foto (gunakan Unsplash)\n    tag: ['Tag1', 'Tag2', 'Tag3'],        // Tags produk/layanan\n    berdiriSejak: '2023',                 // Tahun berdiri\n    omzet: 'Rp X–Y jt/bln',              // Estimasi omzet\n  },\n]\n```\n\n### Mengubah Kategori & Warna\n\nEdit `src/data.ts` untuk menambah kategori baru:\n\n```typescript\nexport const CATEGORIES = ['Semua', 'Kuliner', 'Fashion', 'Kerajinan', 'Jasa', 'Perdagangan', 'Kategori Baru']\n\nexport const CATEGORY_COLORS: Record<string, string> = {\n  Kuliner: 'bg-amber-100 text-amber-800',\n  Fashion: 'bg-rose-100 text-rose-800',\n  Kerajinan: 'bg-green-100 text-green-800',\n  Jasa: 'bg-blue-100 text-blue-800',\n  Perdagangan: 'bg-purple-100 text-purple-800',\n  'Kategori Baru': 'bg-indigo-100 text-indigo-800', // Tambah warna baru\n}\n```\n\n### Mengubah Metadata SEO & PWA\n\nEdit `.figma/make/site.json`:\n\n```json\n{\n  \"title\": \"UMKM Bantarjati\",\n  \"description\": \"Direktori UMKM Kelurahan Bantarjati\",\n  \"robots\": {\n    \"index\": true\n  },\n  \"openGraph\": {\n    \"image\": \"https://example.com/og-image.png\"\n  }\n}\n```\n\n### Build dan Deploy\n\n#### Deploy ke Netlify\n\n1. Push ke GitHub\n2. Connect repo ke Netlify\n3. Configure build:\n   - Build command: `pnpm build`\n   - Publish directory: `dist`\n\n#### Deploy ke Vercel\n\n1. Import GitHub repo ke Vercel\n2. Framework: Vite\n3. Output directory: `dist`\n\n---\n\n## 📱 PWA Features\n\n### Instalasi Aplikasi\n\n**Desktop:**\n1. Buka aplikasi di browser\n2. Klik ikon install (address bar atau menu)\n3. Klik \"Install\"\n\n**Mobile:**\n1. Buka aplikasi di browser\n2. Tap menu (⋮ atau share)\n3. Tap \"Add to Home Screen\" atau \"Install\"\n\n### Fitur Offline\n\n- Aplikasi tetap berfungsi tanpa koneksi internet\n- Data UMKM tetap tersedia\n- Service Worker meng-cache semua assets\n\n### Update Notification\n\nKetika ada versi baru:\n- User akan melihat notifikasi: \"Versi terbaru tersedia\"\n- Klik \"Perbarui\" untuk refresh dengan konten terbaru\n\n---\n\n## 🔧 Scripts Tersedia\n\n```bash\npnpm dev          # Jalankan development server\npnpm build        # Build untuk production\npnpm preview      # Preview build production\npnpm format       # Format kode dengan oxfmt\n```\n\n---\n\n## 📦 Dependencies Utama\n\n```json\n{\n  \"react\": \"^19.0.0\",\n  \"react-dom\": \"^19.0.0\",\n  \"react-router\": \"^8.3.0\",\n  \"workbox-window\": \"^7.4.1\",\n  \"vite\": \"^8.0.0\",\n  \"tailwindcss\": \"^4.0.0\",\n  \"typescript\": \"^5.7.0\"\n}\n```\n\n---\n\n## 🎨 Design System\n\n### Warna Tema\n\n- **Primary**: `#3b2a1a` (Brown - Warna kayu natural)\n- **Background**: `#f5efe6` (Cream - Warna background)\n- **Accent**: `#e8b62d` (Gold - Untuk highlight/update)\n\n### Typography\n\n- Font: System default (sans-serif)\n- Heading: Bold, size 2xl-4xl\n- Body: Regular, size base-lg\n- Caption: Regular, size xs-sm\n\n### Spacing\n\nMenggunakan Tailwind default spacing (4px base unit)\n\n### Responsive Breakpoints\n\n- Mobile: < 640px\n- Tablet: 640px - 1024px\n- Desktop: > 1024px\n\n---\n\n## 🐛 Troubleshooting\n\n### Masalah Umum\n\n**Port 8443 sudah dipakai:**\n```bash\nPORT=3000 pnpm dev\n```\n\n**Build error dengan Tailwind:**\n- Pastikan `@tailwindcss/vite` sudah di-install\n- Clear node_modules: `rm -rf node_modules && pnpm install`\n\n**Service Worker tidak register:**\n- Check browser console untuk error\n- Clear browser cache\n- Jika development, gunakan HTTPS (PWA hanya bekerja di HTTPS dan localhost)\n\n**Image tidak tampil:**\n- Pastikan URL gambar valid\n- Gunakan CORS-friendly image service (Unsplash recommended)\n\n---\n\n## 📞 Kontak & Support\n\n- **Repository**: https://github.com/Raigusss/umkm-bantarjati-web\n- **Issues**: Buka issue untuk bug reports atau feature requests\n- **Contact**: Hubungi tim pengembang melalui GitHub Issues\n\n---\n\n## 📄 Lisensi\n\nProyek ini open source dan tersedia untuk keperluan komersial maupun non-komersial.\n\n---\n\n## 👥 Kontribusi\n\nKami menerima kontribusi! Cara berkontribusi:\n\n1. Fork repository\n2. Buat branch feature (`git checkout -b feature/AmazingFeature`)\n3. Commit changes (`git commit -m 'Add AmazingFeature'`)\n4. Push ke branch (`git push origin feature/AmazingFeature`)\n5. Buka Pull Request\n\nPastikan kode mengikuti:\n- TypeScript strict mode\n- Tailwind CSS utility classes\n- Component export sebagai default export\n\n---\n\n## 🙏 Terima Kasih\n\nDibuat dengan ❤️ untuk UMKM Kelurahan Bantarjati, Bogor.\n\n---\n\n**Last Updated**: September 2026\n"
-}
+# UMKM Bantarjati - Direktori UMKM Kelurahan Bantarjati
+
+> 📱 **Platform digital untuk menjelajahi dan menemukan UMKM lokal di Kelurahan Bantarjati dengan dukungan offline dan instalasi sebagai aplikasi native.**
+
+## 📋 Daftar Isi
+
+- [Tentang Proyek](#tentang-proyek)
+- [Fitur Utama](#fitur-utama)
+- [Tech Stack](#tech-stack)
+- [Struktur Proyek](#struktur-proyek)
+- [Alur Aplikasi](#alur-aplikasi)
+- [Flowchart Sistem](#flowchart-sistem)
+- [Instalasi & Setup](#instalasi--setup)
+- [Panduan Penggunaan](#panduan-penggunaan)
+- [Kontribusi](#kontribusi)
+
+---
+
+## 📌 Tentang Proyek
+
+**UMKM Bantarjati Web** adalah aplikasi Progressive Web App (PWA) yang dirancang untuk menyediakan direktori lengkap dan mudah diakses dari semua Usaha Mikro Kecil dan Menengah (UMKM) di Kelurahan Bantarjati, Bogor.
+
+Aplikasi ini dibangun dengan teknologi modern:
+- **React 19** untuk UI yang responsif dan interaktif
+- **Vite** untuk build yang cepat dan hot reload development
+- **Tailwind CSS v4** untuk styling yang konsisten
+- **React Router** untuk navigasi antar halaman
+- **Service Worker (PWA)** untuk akses offline dan instalasi sebagai aplikasi native
+
+### 📊 Statistik UMKM Bantarjati
+- **142** UMKM terdaftar
+- **48** sektor kuliner
+- **380+** tenaga kerja terserap
+- **Rp 2,1 M** omzet gabungan per bulan
+
+---
+
+## ✨ Fitur Utama
+
+### 1. **Halaman Home / Landing Page**
+   - Tampilan hero dengan pengenalan aplikasi
+   - Statistik UMKM Bantarjati
+   - Featured UMKM pilihan
+   - Call-to-action untuk menjelajahi direktori
+
+### 2. **Halaman Direktori**
+   - Filter UMKM berdasarkan kategori (Semua, Kuliner, Fashion, Kerajinan, Jasa, Perdagangan)
+   - Daftar UMKM dalam grid layout
+   - Informasi dasar setiap UMKM (nama, kategori, deskripsi singkat)
+   - Search/filter real-time
+
+### 3. **Halaman Detail UMKM**
+   - Informasi lengkap tentang setiap UMKM
+   - Foto UMKM berkualitas
+   - Deskripsi detail bisnis
+   - Alamat lengkap
+   - Nomor kontak (WhatsApp clickable)
+   - Jam operasional
+   - Tags/label produk
+   - Informasi tambahan (tahun berdiri, omzet)
+   - Tombol navigasi back/share
+
+### 4. **Halaman Tentang**
+   - Informasi tentang Kelurahan Bantarjati
+   - Visi dan misi program UMKM
+   - Tim pengembang
+   - Contact & sosial media
+
+### 5. **Progressive Web App (PWA)**
+   - ✅ **Offline Support** - Aplikasi tetap berfungsi tanpa internet
+   - ✅ **Install as App** - Bisa diinstal di home screen smartphone/desktop
+   - ✅ **Push Notifications** - Notifikasi update (opsional)
+   - ✅ **Auto-update** - Konten terbaru diunduh otomatis saat online
+
+### 6. **Responsive Design**
+   - 📱 Mobile-first design
+   - 💻 Tampilan sempurna di tablet dan desktop
+   - 🎨 Tema warna yang menarik dan konsisten
+
+---
+
+## 🛠️ Tech Stack
+
+| Kategori | Teknologi |
+|----------|-----------|
+| **Frontend Framework** | React 19, React Router 8 |
+| **Build Tool** | Vite 8 |
+| **Styling** | Tailwind CSS v4 + @tailwindcss/vite |
+| **Language** | TypeScript 5.7 |
+| **PWA** | Workbox Window, vite-plugin-pwa |
+| **Package Manager** | pnpm |
+| **Type Checking** | TypeScript |
+| **Code Formatting** | oxfmt |
+| **Platform** | Figma Make (Custom Vite Config) |
+
+---
+
+## 📁 Struktur Proyek
