@@ -99,41 +99,36 @@ Aplikasi ini dibangun dengan teknologi modern:
 umkm-bantarjati-web/
 ├── .figma/
 │   └── make/
-│       └── site.json              # Konfigurasi metadata website
-│
+│       └── site.json
+├── .gitattributes
+├── .gitignore
+├── .mise.toml
+├── AGENTS.md
+├── CLAUDE.md
+├── icon.svg
+├── index.html
+├── manifest.webmanifest
+├── netlify.toml
+├── package.json
+├── pnpm-lock.yaml
+├── tsconfig.json
+├── vite.config.ts
 ├── src/
-│   ├── main.tsx                   # Entry point aplikasi React
-│   ├── App.tsx                    # Komponen utama dan konfigurasi PWA
-│   ├── index.css                  # CSS global dan import Tailwind
-│   ├── data.ts                    # Data UMKM, kategori, statistik, dan warna
-│   ├── routes.ts                  # Pengaturan routing halaman
-│   ├── vite-env.d.ts              # Deklarasi tipe untuk Vite
-│   │
+│   ├── App.tsx
 │   ├── components/
-│   │   ├── Navbar.tsx             # Menu navigasi website
-│   │   └── Footer.tsx             # Bagian footer website
-│   │
+│   │   ├── Footer.tsx
+│   │   └── Navbar.tsx
+│   ├── data.ts
+│   ├── index.css
 │   ├── layouts/
-│   │   └── Root.tsx               # Layout utama yang membungkus halaman
-│   │
-│   └── pages/
-│       ├── Home.tsx               # Halaman beranda
-│       ├── Direktori.tsx          # Daftar dan filter UMKM
-│       ├── Detail.tsx             # Detail UMKM berdasarkan ID
-│       ├── Tentang.tsx            # Informasi tentang website/program
-│       └── NotFound.tsx           # Halaman 404
-│
-├── AGENTS.md                      # Panduan pengembangan untuk agent
-├── CLAUDE.md                      # Konfigurasi/panduan Claude
-├── .gitattributes                 # Konfigurasi atribut Git
-├── .gitignore                     # Daftar file yang diabaikan Git
-├── .mise.toml                     # Versi Node.js dan pnpm
-├── icon.svg                       # Ikon aplikasi/PWA
-├── index.html                     # HTML utama aplikasi
-├── manifest.webmanifest           # Konfigurasi PWA
-├── netlify.toml                   # Konfigurasi deployment Netlify
-├── package.json                   # Dependency dan script project
-├── pnpm-lock.yaml                 # Versi dependency yang terkunci
-├── tsconfig.json                  # Konfigurasi TypeScript
-├── vite.config.ts                 # Konfigurasi Vite, React, Tailwind, dan PWA
-└── README.md                      # Dokumentasi project
+│   │   └── Root.tsx
+│   ├── main.tsx
+│   ├── pages/
+│   │   ├── Detail.tsx
+│   │   ├── Direktori.tsx
+│   │   ├── Home.tsx
+│   │   ├── NotFound.tsx
+│   │   └── Tentang.tsx
+│   ├── routes.ts
+│   └── vite-env.d.ts
+└── README.md
