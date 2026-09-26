@@ -2,6 +2,8 @@
 
 > 📱 **Platform digital untuk menjelajahi dan menemukan UMKM lokal di Kelurahan Bantarjati dengan dukungan offline dan instalasi sebagai aplikasi native.**
 
+🔗 **Live Demo:** [https://umkm-bantarjati-a14477.netlify.app/](https://umkm-bantarjati-a14477.netlify.app/)
+
 ## 📋 Daftar Isi
 
 - [Tentang Proyek](#tentang-proyek)
