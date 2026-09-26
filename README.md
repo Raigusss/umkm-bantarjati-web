@@ -1,6 +1,6 @@
 # UMKM Bantarjati - Direktori UMKM Kelurahan Bantarjati
 
-> 📱 **Platform digital untuk menjelajahi dan menemukan UMKM lokal di Kelurahan Bantarjati dengan dukungan offline dan instalasi sebagai aplikasi native.**
+> 📱 **Platform digital untuk menjelajahi dan menemukan UMKM lokal di Kelurahan Bantarjati dengan dukungan online dan instalasi sebagai aplikasi native.**
 
 🔗 **Live Demo:** [https://umkm-bantarjati-a14477.netlify.app/](https://umkm-bantarjati-a14477.netlify.app/)
 
